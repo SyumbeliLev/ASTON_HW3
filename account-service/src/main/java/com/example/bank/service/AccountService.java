@@ -1,21 +1,25 @@
 package com.example.bank.service;
 
-import com.example.bank.model.Account;
+import com.example.bank.dto.AccountDto;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
 public interface AccountService {
-    Account createAccount(Account account);
+    AccountDto createAccount(AccountDto account);
 
-    Optional<Account> getAccountById(Long id);
+    Optional<AccountDto> getAccountById(Long id);
 
-    Optional<Account> getAccountByNumber(String accountNumber);
+    void transfer(Long fromAccountId, Long toAccountId, BigDecimal amount);
 
-    Account updateAccountBalance(Long id, BigDecimal newBalance);
+    void withdraw(Long accountId, BigDecimal amount);
+
+    Optional<AccountDto> getAccountByNumber(String accountNumber);
+
+    AccountDto updateAccountBalance(Long id, BigDecimal newBalance);
 
     void deleteAccount(Long id);
 
-    List<Account> getAllAccounts();
+    List<AccountDto> getAllAccounts();
 }

@@ -1,20 +1,21 @@
 package com.example.bank.service;
 
-import com.example.bank.model.Notification;
+import com.example.bank.dto.NotificationDto;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
 public interface NotificationService {
-     Notification createNotification(String message);
+    NotificationDto createNotification(String message);
 
-     List<Notification> getAllNotifications();
+    List<NotificationDto> getAllNotifications();
 
-     Optional<Notification> getNotificationById(Long id);
+    Optional<NotificationDto> getNotificationById(Long id);
 
-     List<Notification> getNotificationsByTimestamp(LocalDateTime startTime, LocalDateTime endTime);
-     void deleteNotification(Long id);
+    List<NotificationDto> getNotificationsByTimestamp(LocalDateTime startTime, LocalDateTime endTime);
 
-     void deleteAllNotifications();
+    void deleteNotification(Long id);
+
+    void deleteAllNotifications();
 }

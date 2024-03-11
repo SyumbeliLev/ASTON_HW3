@@ -1,0 +1,100 @@
+{
+  "info": {
+    "_postman_id": "f13626e9-7b80-4009-b9fc-fe83c73b19d5",
+    "name": "Account API - Updated",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Account",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accountNumber\": \"123456789\",\n  \"balance\": 1000\n}"
+        },
+        "url": "http://localhost:7070/api/accounts"
+      }
+    },
+    {
+      "name": "Get All Accounts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:7070/api/accounts"
+      }
+    },
+    {
+      "name": "Update Account Balance",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": "http://localhost:7070/api/accounts/1?balance=2000"
+      }
+    },
+    {
+      "name": "Get Account by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:7070/api/accounts/1"
+      }
+    },
+    {
+      "name": "Withdraw",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:7070/api/accounts/withdraw?accountId=1&amount=100"
+      }
+    },
+    {
+      "name": "Transfer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "http://localhost:7070/api/accounts/transfer?fromAccountId=1&toAccountId=2&amount=50"
+      }
+    },
+    {
+      "name": "Delete Account",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://localhost:7070/api/accounts/1"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "accountId",
+      "value": "1"
+    },
+    {
+      "key": "newBalance",
+      "value": "2000"
+    },
+    {
+      "key": "withdrawAmount",
+      "value": "100"
+    },
+    {
+      "key": "fromAccountId",
+      "value": "1"
+    },
+    {
+      "key": "toAccountId",
+      "value": "2"
+    },
+    {
+      "key": "transferAmount",
+      "value": "50"
+    }
+  ]
+}

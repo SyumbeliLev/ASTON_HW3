@@ -23,6 +23,9 @@ public class Transaction {
     @Column(name = "account_id")
     private Long accountId;
 
+    @Column(name = "recipient_account_id")
+    private Long recipientAccountId;
+
     private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)

@@ -1,0 +1,74 @@
+{
+  "info": {
+    "name": "Transaction API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Transaction",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"accountId\": 1,\n  \"recipientAccountId\": 2,\n  \"amount\": 100.00,\n  \"type\": \"TRANSFER\",\n  \"timestamp\": \"2023-01-01T00:00:00Z\"\n}"
+        },
+        "url": "http://localhost:8080/api/transactions"
+      }
+    },
+    {
+      "name": "Get All Transactions",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/transactions"
+      }
+    },
+    {
+      "name": "Get Transactions by Account ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/transactions/account/1"
+      }
+    },
+    {
+      "name": "Get Transactions by Type",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/transactions/type/TRANSFER"
+      }
+    },
+    {
+      "name": "Get Transactions by Account ID and Type",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/transactions/account/1/type/TRANSFER"
+      }
+    },
+    {
+      "name": "Get Transaction by ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/transactions/1"
+      }
+    },
+    {
+      "name": "Delete Transaction",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:8080/api/transactions/1"
+      }
+    },
+    {
+      "name": "Delete All Transactions",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:8080/api/transactions"
+      }
+    }
+  ]
+}
