@@ -1,0 +1,69 @@
+{
+  "info": {
+    "name": "Notification API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Notification",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/api/notifications?message=Hello, World!",
+          "protocol": "http",
+          "host": [
+            "localhost:9090"
+          ],
+          "path": [
+            "api",
+            "notifications"
+          ],
+          "query": [
+            {
+              "key": "message",
+              "value": "Hello, World!",
+              "disabled": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Notifications",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:9090/api/notifications"
+      }
+    },
+    {
+      "name": "Get Notification by ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:9090/api/notifications/1"
+      }
+    },
+    {
+      "name": "Get Notifications by Timestamp",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:9090/api/notifications/timestamp?startTime=2021-01-01T00:00:00Z&endTime=2023-01-01T00:00:00Z"
+      }
+    },
+    {
+      "name": "Delete Notification",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:9090/api/notifications/1"
+      }
+    },
+    {
+      "name": "Delete All Notifications",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:9090/api/notifications"
+      }
+    }
+  ],
+  "protocolProfileBehavior": {}
+}

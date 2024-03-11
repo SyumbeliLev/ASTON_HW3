@@ -1,6 +1,6 @@
 package com.example.bank.service;
 
-import com.example.bank.model.Transaction;
+import com.example.bank.dto.TransactionDto;
 import com.example.bank.model.TransactionType;
 
 import java.util.List;
@@ -8,17 +8,17 @@ import java.util.Optional;
 
 public interface TransactionService {
 
-    Transaction createTransaction(Transaction transaction);
+    TransactionDto createTransaction(TransactionDto dto);
 
-    List<Transaction> getAllTransactions();
+    List<TransactionDto> getAllTransactions();
 
-    Optional<Transaction> getTransactionById(Long id);
+    Optional<TransactionDto> getTransactionById(Long id);
 
-    List<Transaction> getTransactionsByAccountId(Long accountId);
+    List<TransactionDto> getTransactionsByAccountId(Long accountId);
 
-    List<Transaction> getTransactionsByType(TransactionType type);
+    List<TransactionDto> getTransactionsByType(TransactionType type);
 
-    List<Transaction> getTransactionsByAccountIdAndType(Long accountId, TransactionType type);
+    List<TransactionDto> getTransactionsByAccountIdAndType(Long accountId, TransactionType type);
 
     void deleteTransaction(Long id);
 

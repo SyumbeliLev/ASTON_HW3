@@ -13,30 +13,97 @@
 
     <dependencies>
         <dependency>
+            <!-- Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container. -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
-        <!-- Swagger dependencies for API documentation -->
         <dependency>
+            <!-- Main library for database refactoring -->
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+        </dependency>
+        <dependency>
+            <!-- Library for integrating Swagger with Spring Boot -->
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.5.10</version>
         </dependency>
         <dependency>
+            <!-- Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java -->
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.30</version>
         </dependency>
-
         <dependency>
+            <!-- Spring for Apache Kafka Support -->
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
             <version>2.8.0</version>
         </dependency>
         <dependency>
+            <!-- Starter for using Spring Data JPA with Hibernate -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        <dependency>
+            <!-- Auto-configuration for Spring Boot -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <!-- PostgreSQL JDBC Driver -->
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.18</version>
+        </dependency>
+        <dependency>
+            <!-- Library for integrating Swagger with Spring Boot -->
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.5.10</version>
+        </dependency>
+        <dependency>
+            <!-- Swagger UI library -->
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <!-- Library for integrating Swagger with Spring Web -->
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-spring-web</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <!-- Annotations for Swagger -->
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.5.20</version>
+        </dependency>
+
+        <!-- JUnit for unit testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito for mocking dependencies -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>3.12.4</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Spring Test for integration testing -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.3.13</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 </project>

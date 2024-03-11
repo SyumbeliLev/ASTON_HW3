@@ -13,14 +13,13 @@ import java.math.BigDecimal;
 
 @Getter
 @Setter
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String accountNumber;
     private BigDecimal balance;
-
 }
